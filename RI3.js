@@ -55,9 +55,9 @@ class Endereco {
 class Empresa {
     #cnpj
     constructor(razaoSocial, nomeFantasia, cnpj, endereco) {
-        this.endereco = endereco
         this.nomeFantasia = nomeFantasia
         this.razaoSocial = razaoSocial
+        this.endereco = endereco
         this.#cnpj = cnpj
         this.clientes = new Set()
         this.telefones = new Set()
@@ -82,5 +82,16 @@ class Empresa {
     getRazaoSocialLower() { return this.razaoSocial.toLowerCase()}
 }
 
-let empresa1 = new Empresa('ABC LTDA', 'NOME X', '123123123', 'ENDERECO X')
+let endereco1 = new Endereco('SP', 'São José dos Campos', 'rua x', '88')
+let telefone1 = new Telefone('12', '88888888888')
+let telefone2 = new Telefone('13', '77777777777')
+let cliente1 = new Cliente('Gustavo', '123.456.789-00', endereco1)
+let empresa1 = new Empresa('ABC LTDA', 'NOME X', '123123123', endereco1)
+
+cliente1.telefones.add(telefone1)
+
+empresa1.clientes.add(cliente1)
+empresa1.telefones.add(telefone1)
+empresa1.telefones.add(telefone2)
+
 console.log(empresa1)
