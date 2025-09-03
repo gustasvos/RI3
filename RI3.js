@@ -15,6 +15,11 @@ class Cliente {
 
     getEnderecoUpper() { return this.endereco.toUpperCase()}
 
+
+    // metodos para attr em minusculo
+    getNomeLower() { return this.nome.toLowerCase()}
+
+    getEnderecoLower() { return this.endereco.toLowerCase()}
 }
 
 class Telefone {
@@ -38,6 +43,13 @@ class Endereco {
     getCidadeUpper() { return this.cidade.toUpperCase()}
 
     getRuaUpper() { return this.rua.toUpperCase()}
+
+    // atributos minusculos
+    getEstadoLower() { return this.estado.toLowerCase()}
+    
+    getCidadeLower() { return this.cidade.toLowerCase()}
+
+    getRuaLower() { return this.rua.toLowerCase()}
 }
 
 class Empresa {
@@ -56,8 +68,19 @@ class Empresa {
 
 
     // atributos maiusculos
-    getNomeFantasiaUpper() { return this.nomeFantasia.toUpperCase()}
-    getRazaoSocialUpper() { return this.razaoSocial.toUpperCase()}
     getEnderecoUpper() { return this.endereco.toUpperCase()}
     
+    getNomeFantasiaUpper() { return this.nomeFantasia.toUpperCase()}
+
+    getRazaoSocialUpper() { return this.razaoSocial.toUpperCase()}
+    
+    // atributos minusculos
+    getEnderecoLower() { return this.endereco.toLowerCase()}
+    
+    getNomeFantasiaLower() { return this.nomeFantasia.toLowerCase()}
+
+    getRazaoSocialLower() { return this.razaoSocial.toLowerCase()}
 }
+
+let empresa1 = new Empresa('ABC LTDA', 'NOME X', '123123123', 'ENDERECO X')
+console.log(empresa1)
